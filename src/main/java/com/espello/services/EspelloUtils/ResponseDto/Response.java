@@ -6,8 +6,7 @@ public class Response<T> {
 
 	private ApiResponseStatus status = ApiResponseStatus.SUCCESS;
 	private T data;
-	private String message;
-	private Error error;
+	
 	public ApiResponseStatus getStatus() {
 		return status;
 	}
@@ -20,20 +19,9 @@ public class Response<T> {
 	public void setData(T data) {
 		this.data = data;
 	}
-	public String getMessage() {
-		return message;
-	}
-	public void setMessage(String message) {
-		this.message = message;
-	}
-	public Error getError() {
-		return error;
-	}
-	public void setError(Error error) {
-		this.error = error;
-	}
 	@Override
 	public String toString() {
-		return "Response [status=" + status + ", data=" + data + ", message=" + message + ", error=" + error + "]";
+		return "Response [status=" + status + ", data=" + data + "]";
 	}
+	
 }
